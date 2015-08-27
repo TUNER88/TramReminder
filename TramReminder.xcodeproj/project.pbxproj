@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8ED07D091B8FA4C100556DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */; };
+		8ED07D0B1B8FA4C100556DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */; };
+		8ED07D0D1B8FA4C100556DB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */; };
+		8ED07D101B8FA4C100556DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */; };
+		8ED07D1C1B8FA4C100556DB1 /* TramReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8ED07D161B8FA4C100556DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8ED07CFB1B8FA4C100556DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ED07D021B8FA4C100556DB1;
+			remoteInfo = TramReminder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8ED07D031B8FA4C100556DB1 /* TramReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TramReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED07D071B8FA4C100556DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8ED07D0F1B8FA4C100556DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TramReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED07D1A1B8FA4C100556DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramReminderTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8ED07D001B8FA4C100556DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED07D121B8FA4C100556DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8ED07CFA1B8FA4C100556DB1 = {
+			isa = PBXGroup;
+			children = (
+				8ED07D051B8FA4C100556DB1 /* TramReminder */,
+				8ED07D181B8FA4C100556DB1 /* TramReminderTests */,
+				8ED07D041B8FA4C100556DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8ED07D041B8FA4C100556DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8ED07D031B8FA4C100556DB1 /* TramReminder.app */,
+				8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ED07D051B8FA4C100556DB1 /* TramReminder */ = {
+			isa = PBXGroup;
+			children = (
+				8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */,
+				8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */,
+				8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */,
+				8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */,
+				8ED07D061B8FA4C100556DB1 /* Supporting Files */,
+			);
+			path = TramReminder;
+			sourceTree = "<group>";
+		};
+		8ED07D061B8FA4C100556DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ED07D071B8FA4C100556DB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8ED07D181B8FA4C100556DB1 /* TramReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */,
+				8ED07D191B8FA4C100556DB1 /* Supporting Files */,
+			);
+			path = TramReminderTests;
+			sourceTree = "<group>";
+		};
+		8ED07D191B8FA4C100556DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ED07D1A1B8FA4C100556DB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8ED07D021B8FA4C100556DB1 /* TramReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ED07D1F1B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminder" */;
+			buildPhases = (
+				8ED07CFF1B8FA4C100556DB1 /* Sources */,
+				8ED07D001B8FA4C100556DB1 /* Frameworks */,
+				8ED07D011B8FA4C100556DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TramReminder;
+			productName = TramReminder;
+			productReference = 8ED07D031B8FA4C100556DB1 /* TramReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8ED07D141B8FA4C100556DB1 /* TramReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ED07D221B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */;
+			buildPhases = (
+				8ED07D111B8FA4C100556DB1 /* Sources */,
+				8ED07D121B8FA4C100556DB1 /* Frameworks */,
+				8ED07D131B8FA4C100556DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8ED07D171B8FA4C100556DB1 /* PBXTargetDependency */,
+			);
+			name = TramReminderTests;
+			productName = TramReminderTests;
+			productReference = 8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8ED07CFB1B8FA4C100556DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Anton Pauli";
+				TargetAttributes = {
+					8ED07D021B8FA4C100556DB1 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					8ED07D141B8FA4C100556DB1 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 8ED07D021B8FA4C100556DB1;
+					};
+				};
+			};
+			buildConfigurationList = 8ED07CFE1B8FA4C100556DB1 /* Build configuration list for PBXProject "TramReminder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8ED07CFA1B8FA4C100556DB1;
+			productRefGroup = 8ED07D041B8FA4C100556DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8ED07D021B8FA4C100556DB1 /* TramReminder */,
+				8ED07D141B8FA4C100556DB1 /* TramReminderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8ED07D011B8FA4C100556DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED07D0D1B8FA4C100556DB1 /* Images.xcassets in Resources */,
+				8ED07D101B8FA4C100556DB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED07D131B8FA4C100556DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8ED07CFF1B8FA4C100556DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED07D0B1B8FA4C100556DB1 /* ViewController.swift in Sources */,
+				8ED07D091B8FA4C100556DB1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED07D111B8FA4C100556DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED07D1C1B8FA4C100556DB1 /* TramReminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8ED07D171B8FA4C100556DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8ED07D021B8FA4C100556DB1 /* TramReminder */;
+			targetProxy = 8ED07D161B8FA4C100556DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ED07D0F1B8FA4C100556DB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8ED07D1D1B8FA4C100556DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8ED07D1E1B8FA4C100556DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8ED07D201B8FA4C100556DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TramReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8ED07D211B8FA4C100556DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TramReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8ED07D231B8FA4C100556DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TramReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TramReminder.app/Contents/MacOS/TramReminder";
+			};
+			name = Debug;
+		};
+		8ED07D241B8FA4C100556DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TramReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TramReminder.app/Contents/MacOS/TramReminder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8ED07CFE1B8FA4C100556DB1 /* Build configuration list for PBXProject "TramReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ED07D1D1B8FA4C100556DB1 /* Debug */,
+				8ED07D1E1B8FA4C100556DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ED07D1F1B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ED07D201B8FA4C100556DB1 /* Debug */,
+				8ED07D211B8FA4C100556DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8ED07D221B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ED07D231B8FA4C100556DB1 /* Debug */,
+				8ED07D241B8FA4C100556DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8ED07CFB1B8FA4C100556DB1 /* Project object */;
+}
