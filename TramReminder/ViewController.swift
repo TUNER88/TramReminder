@@ -8,6 +8,7 @@
 
 import Cocoa
 import WebKit
+import SwiftDate
 
 class ViewController: NSViewController {
 
@@ -41,7 +42,7 @@ class ViewController: NSViewController {
         } else if (self.requestCounter == 2) {
             let rideCount = self.getRideCount()
             
-            //let d = self.getArrival(0);
+            let d = self.getArrival(0);
         }
     
         self.requestCounter++
@@ -86,6 +87,10 @@ class ViewController: NSViewController {
     }
     
     func dateFromTimeString(timeString: String) -> NSDate {
+        
+        let date_custom = NSDate.date(fromString: "00:31", format: DateFormat.Custom("hh:mm"))
+
+        
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "hh:mm"
         
