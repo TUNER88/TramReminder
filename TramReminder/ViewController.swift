@@ -42,7 +42,14 @@ class ViewController: NSViewController {
         } else if (self.requestCounter == 2) {
             let rideCount = self.getRideCount()
             
-            let d = self.getArrival(0);
+            for index in 1...rideCount {
+                let a = self.getArrival(index-1);
+                let d = self.getDeparture(index-1);
+                
+                println(a)
+                println(d)
+            }
+            
         }
     
         self.requestCounter++
@@ -79,29 +86,26 @@ class ViewController: NSViewController {
         return result.toInt()!
     }
     
-    func getArrival(rideIndex: Int) -> NSDate {
-        let command = "document.querySelectorAll('[headers=hafasOVTime]')[\(rideIndex)].innerText.split('an')[0].substring(3).trim()"
-        let result = self.executeJsCommand(command)
+    func getDeparture(rideIndex: Int) -> NSDate {
+        let timeCommand = "document.querySelectorAll('[headers=hafasOVTime]')[\(rideIndex)].innerText.split('an')[0].substring(3).trim()"
+        let timeString = self.executeJsCommand(timeCommand)
         
-        return self.dateFromTimeString(result);
+        let dateCommand = "document.querySelectorAll('[headers=hafasOVDate]')[\(rideIndex)].innerText.trim()"
+        let dateString = self.executeJsCommand(dateCommand)
+        
+        let dateTimeString = "\(timeString) \(dateString)"
+        return NSDate.date(fromString: dateTimeString, format: DateFormat.Custom("HH:mm dd.MM.yy"))!
     }
     
-    func dateFromTimeString(timeString: String) -> NSDate {
+    func getArrival(rideIndex: Int) -> NSDate {
+        let timeCommand = "document.querySelectorAll('[headers=hafasOVTime]')[\(rideIndex)].innerText.split('an')[1].trim()"
+        let timeString = self.executeJsCommand(timeCommand)
         
-        let date_custom = NSDate.date(fromString: "00:31", format: DateFormat.Custom("hh:mm"))
-
+        let dateCommand = "document.querySelectorAll('[headers=hafasOVDate]')[\(rideIndex)].innerText.trim()"
+        let dateString = self.executeJsCommand(dateCommand)
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
-        
-        let userCalendar = NSCalendar.currentCalendar()
-        let firstSaturdayMarch2015DateComponents = NSDateComponents()
-        firstSaturdayMarch2015DateComponents.hour = 10
-        firstSaturdayMarch2015DateComponents.minute = 0
-        let iPadAnnouncementDate = userCalendar.dateFromComponents(firstSaturdayMarch2015DateComponents)!
-        
-        return NSDate()
-        //return dateFormatter.dateFromString(timeString)!
+        let dateTimeString = "\(timeString) \(dateString)"
+        return NSDate.date(fromString: dateTimeString, format: DateFormat.Custom("HH:mm dd.MM.yy"))!
     }
 
 }
