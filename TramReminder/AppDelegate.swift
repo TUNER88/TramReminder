@@ -76,11 +76,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
     
     func getStatusbarText(rides: NSMutableArray) -> String {
         var text = ""
+        var validRidesCount = 0
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var statusBarLimit = 3
+        if(defaults.objectForKey("statusBarItems") != nil){
+            statusBarLimit = defaults.integerForKey("statusBarItems")
+        }
+        
+        
         let separator = " / "
         
         for (index, object) in enumerate(rides) {
             if let ride = object as? Ride {
-                text += ride.timeUntilDeparture() + (index == rides.count-1 ? "" : separator)
+                
+                let lastItem = (validRidesCount+1 == statusBarLimit) || (index == rides.count-1)
+                
+                // skip past rides
+                if(ride.departure.timeIntervalSinceDate(NSDate()) < 0){
+                    continue
+                }
+                
+                text += ride.timeUntilDeparture() + (lastItem ? "" : separator)
+                
+                if(lastItem){
+                    break
+                }
+                
+                validRidesCount++
             }
         }
         
