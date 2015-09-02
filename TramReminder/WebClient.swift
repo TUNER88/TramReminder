@@ -42,34 +42,11 @@ class WebClient: NSObject {
         } else if(self.requestCounter == 3) {
             self.loadDetails()
         } else if (self.requestCounter == 4) {
-            let rideCount = self.getRideCount()
-            var rides = NSMutableArray()
             
-            if(rideCount == 0){
-                println("No rides found")
-                ridesLoadingFailed!()
-                return
-            }
+            let trips = self.getTrips()
             
-            for index in 0...rideCount-1 {
-                
-                let arrival = self.getArrival(index);
-                let depature = self.getDeparture(index);
-                let origin = self.getOrigin(index);
-                let destination = self.getDestination(index);
-                
-                let ride = Ride(
-                    origin: origin,
-                    destination: destination,
-                    departure: depature,
-                    arrival: arrival,
-                    changes: -1
-                )
-                
-                rides.addObject(ride);
-            }
-            
-            self.ridesLoaded!(rides)
+            // fire success closure
+            self.ridesLoaded!(trips)
         }
         
         self.requestCounter++
@@ -109,12 +86,7 @@ class WebClient: NSObject {
         return self.webView.stringByEvaluatingJavaScriptFromString(command)
     }
     
-    func getRideCount() -> Int {
-        let command = "document.querySelectorAll('[headers=hafasOVTime]').length"
-        let result = self.executeJsCommand(command)
-        
-        return result.toInt()!
-    }
+
     
     func getDeparture(rideIndex: Int) -> NSDate {
         let timeCommand = "document.querySelector('[headers=hafasDTL\(rideIndex)_TimeDep]').innerText.trim()"
@@ -160,5 +132,107 @@ class WebClient: NSObject {
         self.ridesLoaded = success;
         self.ridesLoadingFailed = failure;
         
+    }
+    
+    // MARK: MAIN TRIP methodes
+    
+    func getTrips() -> NSMutableArray {
+        let rideCount = self.getRideCount()
+        var rides = NSMutableArray()
+        
+        if(rideCount == 0){
+            println("No rides found")
+            ridesLoadingFailed!()
+            return rides
+        }
+        
+        for i in 0...rideCount-1 {
+            
+            let ride = Trip(
+                origin: self.getOrigin(i),
+                destination: self.getDestination(i),
+                departure: self.getDeparture(i),
+                arrival: self.getArrival(i),
+                transport: "add from subtrips",
+                subtrips: self.getSubtrips(i)
+            )
+            
+            rides.addObject(ride);
+        }
+        
+        return rides
+    }
+    
+    func getRideCount() -> Int {
+        
+        // count trips by number of duration cells
+        let command = "document.querySelectorAll('[headers=hafasOVDuration]').length"
+        let result = self.executeJsCommand(command)
+        
+        return result.toInt()!
+    }
+    
+    
+    // MARK: SUBTRIP methodes
+    
+    func getSubtripCount(rideIndex: Int) -> Int {
+        
+        // count subtrips by number of product cells
+        let command = "document.querySelectorAll('[headers=hafasDTL\(rideIndex)_Products]').length"
+        let result = self.executeJsCommand(command)
+        
+        return result.toInt()!
+    }
+    
+    func getSubtrips(rideIndex: Int) -> NSMutableArray {
+        let subtripCout = self.getSubtripCount(rideIndex)
+        var subtrips = NSMutableArray()
+        
+        
+        for i in 0...subtripCout-1 {
+            
+            let subtrip = Trip(
+                origin: self.getSubtripOrigin(rideIndex, subtripIndex: i),
+                destination: self.getSubtripDestination(rideIndex, subtripIndex: i),
+                departure: self.getSubtripDeparture(rideIndex, subtripIndex: i),
+                arrival: self.getSubtripArival(rideIndex, subtripIndex: i),
+                transport: self.getSubtripTransport(rideIndex, subtripIndex: i),
+                subtrips: NSMutableArray() // TODO: set nil
+            )
+            
+            subtrips.addObject(subtrip);
+        }
+        
+        return subtrips
+    }
+    
+    func getSubtripOrigin(rideIndex: Int, subtripIndex: Int) -> String {
+        let selector = "'[headers=hafasDTL\(rideIndex)_Stop]'"
+        let rowIndex = subtripIndex * 2;
+        
+        let command = "document.querySelectorAll(\(selector))[\(rowIndex)].innerText"
+        return self.executeJsCommand(command)
+    }
+    
+    func getSubtripDestination(rideIndex: Int, subtripIndex: Int) -> String {
+        let selector = "'[headers=hafasDTL\(rideIndex)_Stop]'"
+        let rowIndex = (subtripIndex * 2) + 1;
+        
+        let command = "document.querySelectorAll(\(selector))[\(rowIndex)].innerText"
+        return self.executeJsCommand(command)
+    }
+    
+    func getSubtripDeparture(rideIndex: Int, subtripIndex: Int) -> NSDate {
+        return NSDate()
+    }
+    
+    func getSubtripArival(rideIndex: Int, subtripIndex: Int) -> NSDate {
+        return NSDate()
+    }
+    
+    func getSubtripTransport(rideIndex: Int, subtripIndex: Int) -> String {
+        let selector = "'[headers=hafasDTL\(rideIndex)_Products]'"
+        let command = "document.querySelectorAll(\(selector))[\(subtripIndex)].innerText.trim()"
+        return self.executeJsCommand(command)
     }
 }
