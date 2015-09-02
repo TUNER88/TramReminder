@@ -30,7 +30,7 @@ class DetailsViewController: NSViewController {
         var text = ""
         
         for (index, object) in enumerate(self.rides) {
-            if let ride = object as? Ride {
+            if let ride = object as? Trip {
                 text += ride.departure.toShortTimeString() + " - " + ride.origin + "\n"
                 text += ride.arrival.toShortTimeString() + " - " + ride.destination + "\n"
                 text += "Duration: \(ride.durationToString()) \n"

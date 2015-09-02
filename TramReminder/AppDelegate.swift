@@ -87,7 +87,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         let separator = " / "
         
         for (index, object) in enumerate(rides) {
-            if let ride = object as? Ride {
+            if let ride = object as? Trip {
                 
                 let lastItem = (validRidesCount+1 == statusBarLimit) || (index == rides.count-1)
                 

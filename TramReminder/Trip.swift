@@ -1,5 +1,5 @@
 //
-//  Ride.swift
+//  Trip.swift
 //  TramReminder
 //
 //  Created by Anton Pauli on 29.08.15.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Ride: NSObject {
+class Trip: NSObject {
     
     var origin : String
     var destination : String
@@ -24,22 +24,27 @@ class Ride: NSObject {
         }
     }
     
+    var transport : NSString!
+    var subtrips : NSMutableArray!
     var duration : NSTimeInterval!
     var changes : Int!
     
-    // initialize our ride
-    init(origin: String, destination: String, departure: NSDate, arrival: NSDate, changes: Int) {
+    
+    // initialize our trip
+    init(origin: String, destination: String, departure: NSDate, arrival: NSDate, transport: NSString, subtrips: NSMutableArray) {
         self.origin = origin
         self.destination = destination
         self.departure = departure
         self.arrival = arrival
-        self.changes = changes
+        self.transport = transport
+        self.subtrips = subtrips
+        self.changes = subtrips.count - 1
         
         super.init()
         self.calculateDuration()
     }
     
-    // this method returns a string representation of the ride attributes.
+    // this method returns a string representation of the trip attributes.
     override var description: String {
         return "origin: \(origin)" +
             "destination: \(destination)" +
@@ -49,7 +54,7 @@ class Ride: NSObject {
             "changes: \(changes)"
     }
     
-    // calculate ride duration
+    // calculate trip duration
     func calculateDuration(){
         self.duration = self.arrival.timeIntervalSinceDate(self.departure)
     }
