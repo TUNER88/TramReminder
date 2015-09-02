@@ -6,8 +6,7 @@ branches:
 
 xcode_project: TramReminder.xcworkspace
 xcode_scheme: TramReminder
-osx_image: osx_image: xcode6.4
-xcode_sdk: MacOSX10.10.sdk 
+osx_image: xcode6.4
 
 script:
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
