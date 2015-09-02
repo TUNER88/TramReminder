@@ -45,32 +45,7 @@ class ViewController: NSViewController {
     }
     
     override func webView(sender: WebView!, didFinishLoadForFrame frame: WebFrame!) {
-        if(self.requestCounter == 1) {
-            self.fillForm()
-            self.submitForm()
-        } else if (self.requestCounter == 2) {
-            let rideCount = self.getRideCount()
-            
-            for index in 0...rideCount-1 {
-                
-                let arrival = self.getArrival(index);
-                let depature = self.getDeparture(index);
-                
-                let ride = Ride(
-                    origin: self.origin,
-                    destination: self.destination,
-                    departure: depature,
-                    arrival: arrival,
-                    changes: -1
-                )
-                
-                self.rides.addObject(ride);
-            }
-            
-            self.ridesLoaded!(self.rides)
-        }
-    
-        self.requestCounter++
+
     }
     
     func fillForm() {
