@@ -5,8 +5,16 @@ branches:
 xcode_project: TramReminder.xcworkspace
 xcode_scheme: TramReminder
 osx_image: xcode6.4
+
+before_install:
+- ls
+
+install: true
+
 script:
+- ls
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
+- ls
 deploy:
   provider: releases
   api_key:
