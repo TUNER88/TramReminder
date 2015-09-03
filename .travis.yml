@@ -13,6 +13,7 @@ install: true
 
 script:
 - ls
+- pod install
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
 - ls
 deploy:
