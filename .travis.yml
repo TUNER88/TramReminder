@@ -6,16 +6,11 @@ xcode_project: TramReminder.xcworkspace
 xcode_scheme: TramReminder
 osx_image: xcode6.4
 
-before_install:
-- ls
-
 install: true
 
 script:
-- ls
 - pod install
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
-- ls
 
 on:
   tags: true
@@ -30,6 +25,5 @@ deploy:
   provider: releases
   api_key:
     secure: F2Z+Y1iSMaPxT0Z0VlZ8Uj6OHHw37yk0aUsoY4r/iQf35RpEhCDUEFyX2UXAxJhgiORShHgXC9qpYeTsyeqYK3x/zhDOmz+sekeu+coragwCx7novwyTXr90r0T0pq5aSRvxepIJQQpz7qyYKeolJypbVYwNKHKNklmBn3hA0sVm1VczNguhFVTnkCbiquO7Pjy2biwNTMR5SntggKkLafkfSlY5SirNxhufvBLZ2fhUTdFW7uyqyhBuUuSIhqZ+OKedbPH0hL8gWOvEIKn7HtWq6z/hECOQl7VyY77ZPK/h3IS8ZyYOFzUhWMtXbyy4/Hht+ZL2kr1nLLrMT23ANjiAaQYp/udlowVSeUHkfaiUrw3lXKN+g654jRMJ+G1ebTnVL254zA7K4vOr17I1PFvyEPGAdAGWVUrBy2YeTrzD4OtUEMbaljZ9JFqFj8DyrDPBzScc6jtz+AYsN1h1ZmY6BTAhC8Pm/yL+JR6nsWo8F8rrN6HAnf6EXpBKIBMV+T9r+n56oQvad8UJNBtJqMeS34rJfiVgyXjn0fba1128bKH0UyVkZO8DndRLy3kKpP8+G65XFSwGQ80uO2eCBgqohxh1hBZ4RR1ouoKrCpGXDc9BuktFQgS/vvyBUhz2RM4aOAIqz6es7QeyHhCe5Q8XKUHsHMUINH85jLE1NFc=
-  file: dist/TramReminder.dmg
   on:
     repo: TUNER88/TramReminder
