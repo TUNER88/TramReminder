@@ -17,6 +17,10 @@ script:
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
 - ls
 
+on:
+  tags: true
+  all_branches: true
+
 before_deploy:
 - git status
 
