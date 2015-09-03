@@ -23,6 +23,7 @@ before_deploy:
 - ls TramReminder/
 - hdiutil create TramReminder/hw.dmg -srcfolder TramReminder/ -ov
 - ls
+- ls $DWARF_DSYM_FOLDER_PATH
 
 deploy:
   skip_cleanup: true
