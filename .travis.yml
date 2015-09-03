@@ -8,5 +8,10 @@ xcode_project: TramReminder.xcworkspace
 xcode_scheme: TramReminder
 osx_image: xcode6.4
 
+before_install:
+- ls
+
+install: true
+
 script:
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
