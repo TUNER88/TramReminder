@@ -23,6 +23,7 @@ on:
 
 before_deploy:
 - git status
+- git fetch --tags
 
 deploy:
   skip_cleanup: true
