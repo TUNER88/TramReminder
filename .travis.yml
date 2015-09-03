@@ -16,6 +16,10 @@ script:
 - pod install
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
 - ls
+
+before_deploy:
+- git status
+
 deploy:
   provider: releases
   api_key:
