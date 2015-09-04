@@ -1,20 +1,13 @@
 language: objective-c
-branches:
-  only:
-  - master
+all_branches: true
 xcode_project: TramReminder.xcworkspace
 xcode_scheme: TramReminder
 osx_image: xcode6.4
-
 install: true
 
 script:
 - pod install
 - xcodebuild clean build test -workspace TramReminder.xcworkspace -scheme TramReminder
-
-on:
-  tags: true
-  all_branches: true
 
 before_deploy:
 - xcodebuild clean build archive -workspace TramReminder.xcworkspace -scheme TramReminder -archivePath TramReminder
