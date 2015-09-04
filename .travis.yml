@@ -17,6 +17,8 @@ on:
   all_branches: true
 
 before_deploy:
+- xcodebuild clean build archive -workspace TramReminder.xcworkspace -scheme TramReminder -archivePath TramReminder
+- xcodebuild -exportArchive -exportFormat APP -archivePath TramReminder.xcarchive -exportPath TramReminder
 - git status
 - git fetch --tags
 - ls
