@@ -7,11 +7,9 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindow" customModule="TramReminder" customModuleProvider="target">
             <connections>
                 <outlet property="destinationTextField" destination="YCW-Ke-7cM" id="DVi-QT-1HR"/>
-                <outlet property="originTextField" destination="91Z-Qk-CEs" id="0vx-Sa-j6o"/>
-                <outlet property="statusBarItemLimitChanged" destination="6ow-Uv-MtG" id="Eah-Xp-RD0"/>
-                <outlet property="statusBarItemLimitLabel" destination="12s-C0-jp4" id="1XD-cC-Gr7"/>
-                <outlet property="statusBarItemLimitSlider" destination="6ow-Uv-MtG" id="UgC-1v-q6y"/>
-                <outlet property="statusBarItemLimitValueLabel" destination="12s-C0-jp4" id="Yhy-gB-Vd5"/>
+                <outlet property="originTextField" destination="91Z-Qk-CEs" id="dI1-Eu-hkK"/>
+                <outlet property="statusBarItemLimitSlider" destination="6ow-Uv-MtG" id="prf-98-vCL"/>
+                <outlet property="statusBarItemLimitValueLabel" destination="12s-C0-jp4" id="h8m-CS-9X4"/>
                 <outlet property="updateIntervalSlider" destination="IeG-bX-uez" id="JHI-oR-L2x"/>
                 <outlet property="updateIntervalValueLabel" destination="7QT-Ge-UTS" id="Yzk-5m-fML"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
@@ -64,7 +62,7 @@
                         <rect key="frame" x="139" y="96" width="323" height="27"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="60" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="20" sliderType="linear" id="5WI-9B-Riv"/>
                         <connections>
-                            <action selector="updateIntervalChanged:" target="-2" id="4KU-aA-HuC"/>
+                            <action selector="updateIntervalChanged:" target="-2" id="xn4-PW-PTf"/>
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Io1-qc-sJB">
@@ -87,7 +85,7 @@
                         <rect key="frame" x="139" y="60" width="323" height="27"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="6" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="M4f-59-9D0"/>
                         <connections>
-                            <action selector="statusBarItemLimitChanged:" target="-2" id="6le-8Q-xDV"/>
+                            <action selector="statusBarItemLimitChanged:" target="-2" id="Raf-9h-zXj"/>
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xfp-uz-5be">
