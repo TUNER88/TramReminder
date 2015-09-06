@@ -17,6 +17,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     @IBOutlet weak var updateIntervalSlider: NSSlider!
     @IBOutlet weak var statusBarItemLimitSlider: NSSlider!
     
+    var aboutWindow: AboutWindow!
+    
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -87,4 +89,10 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         statusBarItemLimitValueLabel.stringValue = "\(value)"
     }
     
+    @IBAction func showAboutWindow(sender: NSButton) {
+        if(aboutWindow == nil) {
+            aboutWindow = AboutWindow()
+        }
+        aboutWindow.showWindow(nil)
+    }
 }
