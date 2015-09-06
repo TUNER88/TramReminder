@@ -18,6 +18,7 @@
 		8E211F361B9C78D8004F2FF1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */; };
 		8E211F371B9C78D8004F2FF1 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */; };
 		8E211F381B9C78D8004F2FF1 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F321B9C78D8004F2FF1 /* Trip.swift */; };
+		8E31973F1B9CC70E00530CF8 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31973E1B9CC70E00530CF8 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		8E211F321B9C78D8004F2FF1 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		8E31973E1B9CC70E00530CF8 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				8E211F101B9C7580004F2FF1 /* AppDelegate.swift */,
-				8E211F2D1B9C78D8004F2FF1 /* PreferencesWindow.swift */,
-				8E211F2E1B9C78D8004F2FF1 /* PreferencesWindow.xib */,
-				8E211F2F1B9C78D8004F2FF1 /* WebClient.swift */,
+				8E31973E1B9CC70E00530CF8 /* EventMonitor.swift */,
 				8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */,
 				8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */,
-				8E211F321B9C78D8004F2FF1 /* Trip.swift */,
-				8E211F121B9C7580004F2FF1 /* Images.xcassets */,
 				8E211F141B9C7580004F2FF1 /* MainMenu.xib */,
+				8E211F2D1B9C78D8004F2FF1 /* PreferencesWindow.swift */,
+				8E211F2E1B9C78D8004F2FF1 /* PreferencesWindow.xib */,
+				8E211F321B9C78D8004F2FF1 /* Trip.swift */,
+				8E211F2F1B9C78D8004F2FF1 /* WebClient.swift */,
+				8E211F121B9C7580004F2FF1 /* Images.xcassets */,
 				8E211F0E1B9C7580004F2FF1 /* Supporting Files */,
 			);
 			path = TramReminder;
@@ -303,6 +306,7 @@
 				8E211F381B9C78D8004F2FF1 /* Trip.swift in Sources */,
 				8E211F331B9C78D8004F2FF1 /* PreferencesWindow.swift in Sources */,
 				8E211F111B9C7580004F2FF1 /* AppDelegate.swift in Sources */,
+				8E31973F1B9CC70E00530CF8 /* EventMonitor.swift in Sources */,
 				8E211F351B9C78D8004F2FF1 /* WebClient.swift in Sources */,
 				8E211F361B9C78D8004F2FF1 /* DetailsViewController.swift in Sources */,
 			);

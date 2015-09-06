@@ -8,10 +8,6 @@
 
 import Cocoa
 
-protocol PreferencesWindowDelegate {
-    func preferencesDidUpdate()
-}
-
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var originTextField: NSTextField!
@@ -21,7 +17,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     @IBOutlet weak var updateIntervalSlider: NSSlider!
     @IBOutlet weak var statusBarItemLimitSlider: NSSlider!
     
-    var delegate: PreferencesWindowDelegate?
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -68,7 +63,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         defaults.setValue(updateIntervalSlider.doubleValue, forKey: "updateInterval")
         defaults.setValue(statusBarItemLimitSlider.doubleValue, forKey: "statusBarItems")
         
-        delegate?.preferencesDidUpdate()
+        NSNotificationCenter.defaultCenter().postNotificationName("PreferencesDidChangeNotification", object: nil)
+        println("Fire setting changed notification")
     }
     
     @IBAction func updateIntervalChanged(sender: NSSlider) {
