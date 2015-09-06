@@ -1,5 +1,6 @@
-# TramReminder
-TramReminder
+#TramReminder [![Build Status](https://travis-ci.org/TUNER88/TramReminder.svg?branch=master)](https://travis-ci.org/TUNER88/TramReminder)
+
+
 
 
 ### Acknowledgements
