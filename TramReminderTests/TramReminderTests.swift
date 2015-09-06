@@ -2,7 +2,7 @@
 //  TramReminderTests.swift
 //  TramReminderTests
 //
-//  Created by Anton Pauli on 27.08.15.
+//  Created by Anton Pauli on 06.09.15.
 //  Copyright (c) 2015 Anton Pauli. All rights reserved.
 //
 

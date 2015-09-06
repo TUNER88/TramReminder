@@ -7,61 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3065746B1E4039466A2D97 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8881C9497C631C88A68192 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8E4AC0191B923ED100940EC0 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AC0181B923ED100940EC0 /* Trip.swift */; };
-		8E4AC01C1B926D4000940EC0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AC01A1B926D4000940EC0 /* DetailsViewController.swift */; };
-		8E4AC01D1B926D4000940EC0 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4AC01B1B926D4000940EC0 /* DetailsViewController.xib */; };
-		8E4AC01F1B9320A600940EC0 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AC01E1B9320A600940EC0 /* WebClient.swift */; };
-		8E4AC0221B935C9F00940EC0 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4AC0201B935C9F00940EC0 /* PreferencesWindow.swift */; };
-		8E4AC0231B935C9F00940EC0 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4AC0211B935C9F00940EC0 /* PreferencesWindow.xib */; };
-		8ED07D091B8FA4C100556DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */; };
-		8ED07D0B1B8FA4C100556DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */; };
-		8ED07D0D1B8FA4C100556DB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */; };
-		8ED07D101B8FA4C100556DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */; };
-		8ED07D1C1B8FA4C100556DB1 /* TramReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */; };
+		5ABB99B19A1FD84D7A21A1CC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F077ECCAAD35EF74A30849 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8E211F111B9C7580004F2FF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F101B9C7580004F2FF1 /* AppDelegate.swift */; };
+		8E211F131B9C7580004F2FF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F121B9C7580004F2FF1 /* Images.xcassets */; };
+		8E211F161B9C7580004F2FF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F141B9C7580004F2FF1 /* MainMenu.xib */; };
+		8E211F221B9C7580004F2FF1 /* TramReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F211B9C7580004F2FF1 /* TramReminderTests.swift */; };
+		8E211F331B9C78D8004F2FF1 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F2D1B9C78D8004F2FF1 /* PreferencesWindow.swift */; };
+		8E211F341B9C78D8004F2FF1 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F2E1B9C78D8004F2FF1 /* PreferencesWindow.xib */; };
+		8E211F351B9C78D8004F2FF1 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F2F1B9C78D8004F2FF1 /* WebClient.swift */; };
+		8E211F361B9C78D8004F2FF1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */; };
+		8E211F371B9C78D8004F2FF1 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */; };
+		8E211F381B9C78D8004F2FF1 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F321B9C78D8004F2FF1 /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8ED07D161B8FA4C100556DB1 /* PBXContainerItemProxy */ = {
+		8E211F1C1B9C7580004F2FF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8ED07CFB1B8FA4C100556DB1 /* Project object */;
+			containerPortal = 8E211F031B9C7580004F2FF1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8ED07D021B8FA4C100556DB1;
+			remoteGlobalIDString = 8E211F0A1B9C7580004F2FF1;
 			remoteInfo = TramReminder;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C8881C9497C631C88A68192 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C0E46A24E1828375F89D1A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		682B5E3689CA30536898DD77 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		8E4AC0181B923ED100940EC0 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		8E4AC01A1B926D4000940EC0 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		8E4AC01B1B926D4000940EC0 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
-		8E4AC01E1B9320A600940EC0 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
-		8E4AC0201B935C9F00940EC0 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
-		8E4AC0211B935C9F00940EC0 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
-		8ED07D031B8FA4C100556DB1 /* TramReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TramReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ED07D071B8FA4C100556DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8ED07D0F1B8FA4C100556DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TramReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ED07D1A1B8FA4C100556DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramReminderTests.swift; sourceTree = "<group>"; };
+		05F077ECCAAD35EF74A30849 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0D5E11090B751433CAE91A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7FB2E604DA6EE23FA1C0AFD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8E211F0B1B9C7580004F2FF1 /* TramReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TramReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E211F0F1B9C7580004F2FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E211F101B9C7580004F2FF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E211F121B9C7580004F2FF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8E211F151B9C7580004F2FF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8E211F1B1B9C7580004F2FF1 /* TramReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TramReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E211F201B9C7580004F2FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E211F211B9C7580004F2FF1 /* TramReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramReminderTests.swift; sourceTree = "<group>"; };
+		8E211F2D1B9C78D8004F2FF1 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		8E211F2E1B9C78D8004F2FF1 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		8E211F2F1B9C78D8004F2FF1 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
+		8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		8E211F321B9C78D8004F2FF1 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8ED07D001B8FA4C100556DB1 /* Frameworks */ = {
+		8E211F081B9C7580004F2FF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E3065746B1E4039466A2D97 /* Pods.framework in Frameworks */,
+				5ABB99B19A1FD84D7A21A1CC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED07D121B8FA4C100556DB1 /* Frameworks */ = {
+		8E211F181B9C7580004F2FF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,99 +69,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		495B8894A9D6D25669D80E26 /* Frameworks */ = {
+		1DB419D3951C7E4A47E1B579 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2C8881C9497C631C88A68192 /* Pods.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		76ED87AA80EDB556741768A2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				682B5E3689CA30536898DD77 /* Pods.debug.xcconfig */,
-				5C0E46A24E1828375F89D1A0 /* Pods.release.xcconfig */,
+				7FB2E604DA6EE23FA1C0AFD8 /* Pods.debug.xcconfig */,
+				0D0D5E11090B751433CAE91A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8ED07CFA1B8FA4C100556DB1 = {
+		8E211F021B9C7580004F2FF1 = {
 			isa = PBXGroup;
 			children = (
-				8ED07D051B8FA4C100556DB1 /* TramReminder */,
-				8ED07D181B8FA4C100556DB1 /* TramReminderTests */,
-				8ED07D041B8FA4C100556DB1 /* Products */,
-				76ED87AA80EDB556741768A2 /* Pods */,
-				495B8894A9D6D25669D80E26 /* Frameworks */,
+				8E211F0D1B9C7580004F2FF1 /* TramReminder */,
+				8E211F1E1B9C7580004F2FF1 /* TramReminderTests */,
+				8E211F0C1B9C7580004F2FF1 /* Products */,
+				1DB419D3951C7E4A47E1B579 /* Pods */,
+				C7DB959433BC4663CA4982A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		8ED07D041B8FA4C100556DB1 /* Products */ = {
+		8E211F0C1B9C7580004F2FF1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8ED07D031B8FA4C100556DB1 /* TramReminder.app */,
-				8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */,
+				8E211F0B1B9C7580004F2FF1 /* TramReminder.app */,
+				8E211F1B1B9C7580004F2FF1 /* TramReminderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8ED07D051B8FA4C100556DB1 /* TramReminder */ = {
+		8E211F0D1B9C7580004F2FF1 /* TramReminder */ = {
 			isa = PBXGroup;
 			children = (
-				8ED07D081B8FA4C100556DB1 /* AppDelegate.swift */,
-				8E4AC0201B935C9F00940EC0 /* PreferencesWindow.swift */,
-				8E4AC0211B935C9F00940EC0 /* PreferencesWindow.xib */,
-				8E4AC01E1B9320A600940EC0 /* WebClient.swift */,
-				8E4AC01A1B926D4000940EC0 /* DetailsViewController.swift */,
-				8E4AC01B1B926D4000940EC0 /* DetailsViewController.xib */,
-				8ED07D0A1B8FA4C100556DB1 /* ViewController.swift */,
-				8E4AC0181B923ED100940EC0 /* Trip.swift */,
-				8ED07D0C1B8FA4C100556DB1 /* Images.xcassets */,
-				8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */,
-				8ED07D061B8FA4C100556DB1 /* Supporting Files */,
+				8E211F101B9C7580004F2FF1 /* AppDelegate.swift */,
+				8E211F2D1B9C78D8004F2FF1 /* PreferencesWindow.swift */,
+				8E211F2E1B9C78D8004F2FF1 /* PreferencesWindow.xib */,
+				8E211F2F1B9C78D8004F2FF1 /* WebClient.swift */,
+				8E211F301B9C78D8004F2FF1 /* DetailsViewController.swift */,
+				8E211F311B9C78D8004F2FF1 /* DetailsViewController.xib */,
+				8E211F321B9C78D8004F2FF1 /* Trip.swift */,
+				8E211F121B9C7580004F2FF1 /* Images.xcassets */,
+				8E211F141B9C7580004F2FF1 /* MainMenu.xib */,
+				8E211F0E1B9C7580004F2FF1 /* Supporting Files */,
 			);
 			path = TramReminder;
 			sourceTree = "<group>";
 		};
-		8ED07D061B8FA4C100556DB1 /* Supporting Files */ = {
+		8E211F0E1B9C7580004F2FF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8ED07D071B8FA4C100556DB1 /* Info.plist */,
+				8E211F0F1B9C7580004F2FF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8ED07D181B8FA4C100556DB1 /* TramReminderTests */ = {
+		8E211F1E1B9C7580004F2FF1 /* TramReminderTests */ = {
 			isa = PBXGroup;
 			children = (
-				8ED07D1B1B8FA4C100556DB1 /* TramReminderTests.swift */,
-				8ED07D191B8FA4C100556DB1 /* Supporting Files */,
+				8E211F211B9C7580004F2FF1 /* TramReminderTests.swift */,
+				8E211F1F1B9C7580004F2FF1 /* Supporting Files */,
 			);
 			path = TramReminderTests;
 			sourceTree = "<group>";
 		};
-		8ED07D191B8FA4C100556DB1 /* Supporting Files */ = {
+		8E211F1F1B9C7580004F2FF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8ED07D1A1B8FA4C100556DB1 /* Info.plist */,
+				8E211F201B9C7580004F2FF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7DB959433BC4663CA4982A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05F077ECCAAD35EF74A30849 /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8ED07D021B8FA4C100556DB1 /* TramReminder */ = {
+		8E211F0A1B9C7580004F2FF1 /* TramReminder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ED07D1F1B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminder" */;
+			buildConfigurationList = 8E211F251B9C7580004F2FF1 /* Build configuration list for PBXNativeTarget "TramReminder" */;
 			buildPhases = (
-				9D06A5A2A131ED07C89DF0FA /* Check Pods Manifest.lock */,
-				8ED07CFF1B8FA4C100556DB1 /* Sources */,
-				8ED07D001B8FA4C100556DB1 /* Frameworks */,
-				8ED07D011B8FA4C100556DB1 /* Resources */,
-				B6853FE114F7A569BADF4118 /* Embed Pods Frameworks */,
-				EDF7BD6F5EDD0DD661212431 /* Copy Pods Resources */,
+				D8F0D5B8093663CEBF4563B5 /* Check Pods Manifest.lock */,
+				8E211F071B9C7580004F2FF1 /* Sources */,
+				8E211F081B9C7580004F2FF1 /* Frameworks */,
+				8E211F091B9C7580004F2FF1 /* Resources */,
+				16026130FFC519F19CBFF28E /* Embed Pods Frameworks */,
+				A9C0B90A3C5E0DAF2D05DC43 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,46 +168,46 @@
 			);
 			name = TramReminder;
 			productName = TramReminder;
-			productReference = 8ED07D031B8FA4C100556DB1 /* TramReminder.app */;
+			productReference = 8E211F0B1B9C7580004F2FF1 /* TramReminder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8ED07D141B8FA4C100556DB1 /* TramReminderTests */ = {
+		8E211F1A1B9C7580004F2FF1 /* TramReminderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ED07D221B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */;
+			buildConfigurationList = 8E211F281B9C7580004F2FF1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */;
 			buildPhases = (
-				8ED07D111B8FA4C100556DB1 /* Sources */,
-				8ED07D121B8FA4C100556DB1 /* Frameworks */,
-				8ED07D131B8FA4C100556DB1 /* Resources */,
+				8E211F171B9C7580004F2FF1 /* Sources */,
+				8E211F181B9C7580004F2FF1 /* Frameworks */,
+				8E211F191B9C7580004F2FF1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8ED07D171B8FA4C100556DB1 /* PBXTargetDependency */,
+				8E211F1D1B9C7580004F2FF1 /* PBXTargetDependency */,
 			);
 			name = TramReminderTests;
 			productName = TramReminderTests;
-			productReference = 8ED07D151B8FA4C100556DB1 /* TramReminderTests.xctest */;
+			productReference = 8E211F1B1B9C7580004F2FF1 /* TramReminderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8ED07CFB1B8FA4C100556DB1 /* Project object */ = {
+		8E211F031B9C7580004F2FF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Anton Pauli";
 				TargetAttributes = {
-					8ED07D021B8FA4C100556DB1 = {
+					8E211F0A1B9C7580004F2FF1 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					8ED07D141B8FA4C100556DB1 = {
+					8E211F1A1B9C7580004F2FF1 = {
 						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 8ED07D021B8FA4C100556DB1;
+						TestTargetID = 8E211F0A1B9C7580004F2FF1;
 					};
 				};
 			};
-			buildConfigurationList = 8ED07CFE1B8FA4C100556DB1 /* Build configuration list for PBXProject "TramReminder" */;
+			buildConfigurationList = 8E211F061B9C7580004F2FF1 /* Build configuration list for PBXProject "TramReminder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,30 +215,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 8ED07CFA1B8FA4C100556DB1;
-			productRefGroup = 8ED07D041B8FA4C100556DB1 /* Products */;
+			mainGroup = 8E211F021B9C7580004F2FF1;
+			productRefGroup = 8E211F0C1B9C7580004F2FF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8ED07D021B8FA4C100556DB1 /* TramReminder */,
-				8ED07D141B8FA4C100556DB1 /* TramReminderTests */,
+				8E211F0A1B9C7580004F2FF1 /* TramReminder */,
+				8E211F1A1B9C7580004F2FF1 /* TramReminderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8ED07D011B8FA4C100556DB1 /* Resources */ = {
+		8E211F091B9C7580004F2FF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4AC0231B935C9F00940EC0 /* PreferencesWindow.xib in Resources */,
-				8ED07D0D1B8FA4C100556DB1 /* Images.xcassets in Resources */,
-				8ED07D101B8FA4C100556DB1 /* Main.storyboard in Resources */,
-				8E4AC01D1B926D4000940EC0 /* DetailsViewController.xib in Resources */,
+				8E211F131B9C7580004F2FF1 /* Images.xcassets in Resources */,
+				8E211F341B9C78D8004F2FF1 /* PreferencesWindow.xib in Resources */,
+				8E211F161B9C7580004F2FF1 /* MainMenu.xib in Resources */,
+				8E211F371B9C78D8004F2FF1 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED07D131B8FA4C100556DB1 /* Resources */ = {
+		8E211F191B9C7580004F2FF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,22 +248,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9D06A5A2A131ED07C89DF0FA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B6853FE114F7A569BADF4118 /* Embed Pods Frameworks */ = {
+		16026130FFC519F19CBFF28E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +263,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EDF7BD6F5EDD0DD661212431 /* Copy Pods Resources */ = {
+		A9C0B90A3C5E0DAF2D05DC43 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,53 +278,67 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D8F0D5B8093663CEBF4563B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8ED07CFF1B8FA4C100556DB1 /* Sources */ = {
+		8E211F071B9C7580004F2FF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED07D0B1B8FA4C100556DB1 /* ViewController.swift in Sources */,
-				8ED07D091B8FA4C100556DB1 /* AppDelegate.swift in Sources */,
-				8E4AC0191B923ED100940EC0 /* Trip.swift in Sources */,
-				8E4AC01F1B9320A600940EC0 /* WebClient.swift in Sources */,
-				8E4AC0221B935C9F00940EC0 /* PreferencesWindow.swift in Sources */,
-				8E4AC01C1B926D4000940EC0 /* DetailsViewController.swift in Sources */,
+				8E211F381B9C78D8004F2FF1 /* Trip.swift in Sources */,
+				8E211F331B9C78D8004F2FF1 /* PreferencesWindow.swift in Sources */,
+				8E211F111B9C7580004F2FF1 /* AppDelegate.swift in Sources */,
+				8E211F351B9C78D8004F2FF1 /* WebClient.swift in Sources */,
+				8E211F361B9C78D8004F2FF1 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED07D111B8FA4C100556DB1 /* Sources */ = {
+		8E211F171B9C7580004F2FF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED07D1C1B8FA4C100556DB1 /* TramReminderTests.swift in Sources */,
+				8E211F221B9C7580004F2FF1 /* TramReminderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8ED07D171B8FA4C100556DB1 /* PBXTargetDependency */ = {
+		8E211F1D1B9C7580004F2FF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8ED07D021B8FA4C100556DB1 /* TramReminder */;
-			targetProxy = 8ED07D161B8FA4C100556DB1 /* PBXContainerItemProxy */;
+			target = 8E211F0A1B9C7580004F2FF1 /* TramReminder */;
+			targetProxy = 8E211F1C1B9C7580004F2FF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8ED07D0E1B8FA4C100556DB1 /* Main.storyboard */ = {
+		8E211F141B9C7580004F2FF1 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8ED07D0F1B8FA4C100556DB1 /* Base */,
+				8E211F151B9C7580004F2FF1 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8ED07D1D1B8FA4C100556DB1 /* Debug */ = {
+		8E211F231B9C7580004F2FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,7 +382,7 @@
 			};
 			name = Debug;
 		};
-		8ED07D1E1B8FA4C100556DB1 /* Release */ = {
+		8E211F241B9C7580004F2FF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,9 +418,9 @@
 			};
 			name = Release;
 		};
-		8ED07D201B8FA4C100556DB1 /* Debug */ = {
+		8E211F261B9C7580004F2FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 682B5E3689CA30536898DD77 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7FB2E604DA6EE23FA1C0AFD8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -434,9 +430,9 @@
 			};
 			name = Debug;
 		};
-		8ED07D211B8FA4C100556DB1 /* Release */ = {
+		8E211F271B9C7580004F2FF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C0E46A24E1828375F89D1A0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 0D0D5E11090B751433CAE91A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -446,7 +442,7 @@
 			};
 			name = Release;
 		};
-		8ED07D231B8FA4C100556DB1 /* Debug */ = {
+		8E211F291B9C7580004F2FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,7 +462,7 @@
 			};
 			name = Debug;
 		};
-		8ED07D241B8FA4C100556DB1 /* Release */ = {
+		8E211F2A1B9C7580004F2FF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,34 +481,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8ED07CFE1B8FA4C100556DB1 /* Build configuration list for PBXProject "TramReminder" */ = {
+		8E211F061B9C7580004F2FF1 /* Build configuration list for PBXProject "TramReminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ED07D1D1B8FA4C100556DB1 /* Debug */,
-				8ED07D1E1B8FA4C100556DB1 /* Release */,
+				8E211F231B9C7580004F2FF1 /* Debug */,
+				8E211F241B9C7580004F2FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ED07D1F1B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminder" */ = {
+		8E211F251B9C7580004F2FF1 /* Build configuration list for PBXNativeTarget "TramReminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ED07D201B8FA4C100556DB1 /* Debug */,
-				8ED07D211B8FA4C100556DB1 /* Release */,
+				8E211F261B9C7580004F2FF1 /* Debug */,
+				8E211F271B9C7580004F2FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ED07D221B8FA4C100556DB1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */ = {
+		8E211F281B9C7580004F2FF1 /* Build configuration list for PBXNativeTarget "TramReminderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ED07D231B8FA4C100556DB1 /* Debug */,
-				8ED07D241B8FA4C100556DB1 /* Release */,
+				8E211F291B9C7580004F2FF1 /* Debug */,
+				8E211F2A1B9C7580004F2FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8ED07CFB1B8FA4C100556DB1 /* Project object */;
+	rootObject = 8E211F031B9C7580004F2FF1 /* Project object */;
 }
