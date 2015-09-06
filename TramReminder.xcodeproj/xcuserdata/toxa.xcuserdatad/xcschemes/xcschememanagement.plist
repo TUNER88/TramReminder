@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TramReminder.xcscheme_^#shared#^_</key>
+		<key>TramReminder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8ED07D021B8FA4C100556DB1</key>
+		<key>8E211F0A1B9C7580004F2FF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8ED07D141B8FA4C100556DB1</key>
+		<key>8E211F1A1B9C7580004F2FF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

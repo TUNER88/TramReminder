@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TramReminder
 //
-//  Created by Anton Pauli on 27.08.15.
+//  Created by Anton Pauli on 06.09.15.
 //  Copyright (c) 2015 Anton Pauli. All rights reserved.
 //
 
@@ -10,6 +10,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
+
+    @IBOutlet weak var window: NSWindow!
     
     let menu = NSMenu()
     let popover = NSPopover()
@@ -27,7 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
     // Jena, Lobeda-West
     var vc = WebClient(origin: "", destination: "")
 
+
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        NSApplication.sharedApplication().hide(nil)
+        
+        //NSApp.activateIgnoringOtherApps(true)
         
         loadConfigs()
         
@@ -41,10 +47,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         
         self.viewRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(viewRefreshInterval, target: self, selector: Selector("refreshViews"), userInfo: nil, repeats: true)
         self.dataRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(dataRefreshInterval, target: self, selector: Selector("reloadRides"), userInfo: nil, repeats: true)
-
+        
         
         self.reloadRides()
-
+        
     }
     
     func preferencesDidUpdate() {
@@ -64,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
             self.refreshViews()
             
             println("ok")
-        }, failure: {
+            }, failure: {
                 println("NOT OK")
         })
     }
@@ -125,13 +131,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         } else {
             showPopover(sender)
         }
-    } 
-
+    }
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 
-    
 
 }
 
