@@ -9,12 +9,13 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     
     let menu = NSMenu()
     let popover = NSPopover()
+    var eventMonitor: EventMonitor?
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     var rides = NSMutableArray()
     let detailViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
@@ -28,40 +29,65 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
     // Jena, Stadtzentrum, Löbdergraben
     // Jena, Lobeda-West
     var vc = WebClient(origin: "", destination: "")
-
-
+    
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        NSApplication.sharedApplication().hide(nil)
         
-        //NSApp.activateIgnoringOtherApps(true)
-        
-        loadConfigs()
-        
+        // listen to PreferencesDidChangeNotification
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector:
+            "preferencesDidChange:",
+            name:"PreferencesDidChangeNotification",
+            object: nil)
+
+        // add statusbar button / icon
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarIcon")
             button.action = Selector("togglePopover:")
         }
         
-        statusItem.title = "Loading..."
+        // load origin and destination
+        loadConfigs()
+        
+        // add popover controller
         popover.contentViewController = self.detailViewController
+        eventMonitor = EventMonitor(mask: .LeftMouseDownMask | .RightMouseDownMask) { [unowned self] event in
+            if self.popover.shown {
+                self.closePopover(event)
+            }
+        }
+        eventMonitor?.start()
         
-        self.viewRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(viewRefreshInterval, target: self, selector: Selector("refreshViews"), userInfo: nil, repeats: true)
-        self.dataRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(dataRefreshInterval, target: self, selector: Selector("reloadRides"), userInfo: nil, repeats: true)
-        
-        
+        // load data
         self.reloadRides()
-        
     }
     
-    func preferencesDidUpdate() {
+    func preferencesDidChange(aNotification: NSNotification) {
         loadConfigs()
         reloadRides()
     }
     
     func loadConfigs(){
+        statusItem.title = "Loading..."
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         vc.origin = defaults.stringForKey("origin") ?? ""
         vc.destination = defaults.stringForKey("destination") ?? ""
+        
+        // refresh timers
+        if(defaults.objectForKey("updateInterval") != nil){
+            dataRefreshInterval = defaults.doubleForKey("updateInterval") * 60
+        }
+        
+        viewRefreshTimer.invalidate()
+        dataRefreshTimer.invalidate()
+        
+        viewRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(viewRefreshInterval, target: self, selector: Selector("refreshViews"), userInfo: nil, repeats: true)
+        
+        if(dataRefreshInterval != 0) {
+            dataRefreshTimer = NSTimer.scheduledTimerWithTimeInterval(dataRefreshInterval, target: self, selector: Selector("reloadRides"), userInfo: nil, repeats: true)
+        }
     }
     
     func reloadRides(){
@@ -69,10 +95,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
             self.rides = data;
             self.refreshViews()
             
-            println("ok")
+                println("ok")
             }, failure: {
                 println("NOT OK")
-        })
+            }
+        )
     }
     
     func refreshViews(){
@@ -119,10 +146,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         if let button = statusItem.button {
             popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSMinYEdge)
         }
+        eventMonitor?.start()
     }
     
     func closePopover(sender: AnyObject?) {
         popover.performClose(sender)
+        eventMonitor?.stop()
     }
     
     func togglePopover(sender: AnyObject?) {

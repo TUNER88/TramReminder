@@ -40,6 +40,8 @@ class DetailsViewController: NSViewController {
         
         rideDescriptions.stringValue = text
     }
+    
+    
     @IBAction func preferencesClicked(sender: NSButtonCell) {
         preferencesWindow.showWindow(nil)
     }
