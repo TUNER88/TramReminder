@@ -19,7 +19,7 @@ class WebClient: NSObject {
     
     var requestCounter: Int = 0
     
-    var ridesLoaded: ((NSMutableArray) -> (Void))?
+    var ridesLoaded: (([Trip]) -> (Void))?
     var ridesLoadingFailed: ((Void) -> (Void))?
     
     init(origin: String, destination: String) {
@@ -121,7 +121,7 @@ class WebClient: NSObject {
         return self.executeJsCommand(command)
     }
     
-    func loadRides(success : (NSMutableArray) -> Void, failure : Void -> Void)
+    func loadRides(success : ([Trip]) -> Void, failure : Void -> Void)
     {
         self.requestCounter = 0;
         let urlString = "http://vmt.hafas.de"
@@ -136,9 +136,9 @@ class WebClient: NSObject {
     
     // MARK: MAIN TRIP methodes
     
-    func getTrips() -> NSMutableArray {
+    func getTrips() -> [Trip] {
         let rideCount = self.getRideCount()
-        var rides = NSMutableArray()
+        var rides = [Trip]()
         
         if(rideCount == 0){
             println("No rides found")
@@ -157,7 +157,7 @@ class WebClient: NSObject {
                 subtrips: self.getSubtrips(i)
             )
             
-            rides.addObject(ride);
+            rides.append(ride)
         }
         
         return rides

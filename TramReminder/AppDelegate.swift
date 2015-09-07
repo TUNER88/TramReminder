@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-    var rides = NSMutableArray()
+    var rides = [Trip]()
     let detailViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
     
     var viewRefreshTimer = NSTimer()
@@ -107,7 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.detailViewController!.rides = self.rides
     }
     
-    func getStatusbarText(rides: NSMutableArray) -> String {
+    func getStatusbarText(rides: [Trip]) -> String {
         var text = ""
         var validRidesCount = 0
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -119,24 +119,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let separator = " / "
         
-        for (index, object) in enumerate(rides) {
-            if let ride = object as? Trip {
+        for (index, ride) in enumerate(rides) {
+            
+            let lastItem = (validRidesCount+1 == statusBarLimit) || (index == rides.count-1)
                 
-                let lastItem = (validRidesCount+1 == statusBarLimit) || (index == rides.count-1)
-                
-                // skip past rides
-                if(ride.departure.timeIntervalSinceDate(NSDate()) < 0){
-                    continue
-                }
-                
-                text += ride.timeUntilDeparture() + (lastItem ? "" : separator)
-                
-                if(lastItem){
-                    break
-                }
-                
-                validRidesCount++
+            // skip past rides
+            if(ride.departure.timeIntervalSinceDate(NSDate()) < 0){
+                continue
             }
+                
+            text += ride.timeUntilDeparture() + (lastItem ? "" : separator)
+                
+            if(lastItem){
+                break
+            }
+                
+            validRidesCount++
+            
         }
         
         return text

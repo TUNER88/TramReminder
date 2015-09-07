@@ -13,7 +13,8 @@ class DetailsViewController: NSViewController {
     
     var preferencesWindow: PreferencesWindow!
     @IBOutlet weak var rideDescriptions: NSTextField!
-    var rides: NSMutableArray = []
+    //var rides: NSMutableArray = []
+    var rides = [Trip]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,11 @@ class DetailsViewController: NSViewController {
     func displayRides() {
         var text = ""
         
-        for (index, object) in enumerate(self.rides) {
-            if let ride = object as? Trip {
-                text += ride.departure.toShortTimeString() + " - " + ride.origin + "\n"
-                text += ride.arrival.toShortTimeString() + " - " + ride.destination + "\n"
-                text += "Duration: \(ride.durationToString()) \n"
-                text += "\n"
-            }
+        for (index, ride) in enumerate(self.rides) {
+            text += ride.departure.toShortTimeString() + " - " + ride.origin + "\n"
+            text += ride.arrival.toShortTimeString() + " - " + ride.destination + "\n"
+            text += "Duration: \(ride.durationToString()) \n"
+            text += "\n"
         }
         
         rideDescriptions.stringValue = text
