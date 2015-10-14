@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // add popover controller
         popover.contentViewController = self.detailViewController
-        eventMonitor = EventMonitor(mask: .LeftMouseDownMask | .RightMouseDownMask) { [unowned self] event in
+        eventMonitor = EventMonitor(mask: [.LeftMouseDownMask, .RightMouseDownMask]) { [unowned self] event in
             if self.popover.shown {
                 self.closePopover(event)
             }
@@ -95,9 +95,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.rides = data;
             self.refreshViews()
             
-                println("ok")
+                print("ok")
             }, failure: {
-                println("NOT OK")
+                print("NOT OK")
             }
         )
     }
@@ -119,7 +119,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let separator = " / "
         
-        for (index, ride) in enumerate(rides) {
+        for (index, ride) in rides.enumerate() {
             
             let lastItem = (validRidesCount+1 == statusBarLimit) || (index == rides.count-1)
                 
@@ -143,7 +143,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func showPopover(sender: AnyObject?) {
         if let button = statusItem.button {
-            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSMinYEdge)
+            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
         }
         eventMonitor?.start()
     }

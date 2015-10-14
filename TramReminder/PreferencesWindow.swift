@@ -66,7 +66,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         defaults.setValue(statusBarItemLimitSlider.doubleValue, forKey: "statusBarItems")
         
         NSNotificationCenter.defaultCenter().postNotificationName("PreferencesDidChangeNotification", object: nil)
-        println("Fire setting changed notification")
+        print("Fire setting changed notification")
     }
     
     @IBAction func updateIntervalChanged(sender: NSSlider) {

@@ -1,10 +1,10 @@
 PODS:
-  - SwiftDate (1.0.11)
+  - SwiftDate (1.2)
 
 DEPENDENCIES:
   - SwiftDate
 
 SPEC CHECKSUMS:
-  SwiftDate: c2fdcd66c327c799749a435a05521b20a4074009
+  SwiftDate: 49ebd4efb5f82336cfc2b1d8a6622f47d4b17370
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

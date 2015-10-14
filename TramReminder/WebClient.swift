@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 import SwiftDate
 
-class WebClient: NSObject {
+class WebClient: NSObject, WebFrameLoadDelegate {
     
     var webView: WebView = WebView()
     
@@ -32,7 +32,7 @@ class WebClient: NSObject {
     
 
     
-    override func webView(sender: WebView, didFinishLoadForFrame frame: WebFrame) {
+    func webView(sender: WebView, didFinishLoadForFrame frame: WebFrame) {
         
         if(self.requestCounter == 1) {
             self.fillForm()
@@ -82,7 +82,7 @@ class WebClient: NSObject {
     }
     
     func executeJsCommand(command: String) -> String{
-        println(command)
+        print(command)
         return self.webView.stringByEvaluatingJavaScriptFromString(command)
     }
     
@@ -141,7 +141,7 @@ class WebClient: NSObject {
         var rides = [Trip]()
         
         if(rideCount == 0){
-            println("No rides found")
+            print("No rides found")
             ridesLoadingFailed!()
             return rides
         }
@@ -169,7 +169,7 @@ class WebClient: NSObject {
         let command = "document.querySelectorAll('[headers=hafasOVDuration]').length"
         let result = self.executeJsCommand(command)
         
-        return result.toInt()!
+        return Int(result)!
     }
     
     
@@ -181,12 +181,12 @@ class WebClient: NSObject {
         let command = "document.querySelectorAll('[headers=hafasDTL\(rideIndex)_Products]').length"
         let result = self.executeJsCommand(command)
         
-        return result.toInt()!
+        return Int(result)!
     }
     
     func getSubtrips(rideIndex: Int) -> NSMutableArray {
         let subtripCout = self.getSubtripCount(rideIndex)
-        var subtrips = NSMutableArray()
+        let subtrips = NSMutableArray()
         
         
         for i in 0...subtripCout-1 {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5ABB99B19A1FD84D7A21A1CC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F077ECCAAD35EF74A30849 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5ABB99B19A1FD84D7A21A1CC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F077ECCAAD35EF74A30849 /* Pods.framework */; };
 		8E211F111B9C7580004F2FF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211F101B9C7580004F2FF1 /* AppDelegate.swift */; };
 		8E211F131B9C7580004F2FF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F121B9C7580004F2FF1 /* Images.xcassets */; };
 		8E211F161B9C7580004F2FF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E211F141B9C7580004F2FF1 /* MainMenu.xib */; };
@@ -204,6 +204,8 @@
 		8E211F031B9C7580004F2FF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Anton Pauli";
 				TargetAttributes = {
